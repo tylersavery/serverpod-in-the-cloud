@@ -1,0 +1,7 @@
+class: Todo
+
+table: todo
+
+fields:
+    taskName: String
+    isCompleted: bool

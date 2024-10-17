@@ -1,0 +1,59 @@
+{
+  "moduleName": "sp_cloud",
+  "tables": [
+    {
+      "name": "todo",
+      "dartName": "Todo",
+      "module": "sp_cloud",
+      "schema": "public",
+      "columns": [
+        {
+          "name": "id",
+          "columnType": 6,
+          "isNullable": false,
+          "columnDefault": "nextval('todo_id_seq'::regclass)",
+          "dartType": "int?"
+        },
+        {
+          "name": "taskName",
+          "columnType": 0,
+          "isNullable": false,
+          "dartType": "String"
+        },
+        {
+          "name": "isCompleted",
+          "columnType": 1,
+          "isNullable": false,
+          "dartType": "bool"
+        }
+      ],
+      "foreignKeys": [],
+      "indexes": [
+        {
+          "indexName": "todo_pkey",
+          "elements": [
+            {
+              "type": 0,
+              "definition": "id"
+            }
+          ],
+          "type": "btree",
+          "isUnique": true,
+          "isPrimary": true
+        }
+      ],
+      "managed": true
+    }
+  ],
+  "installedModules": [
+    {
+      "module": "serverpod",
+      "version": "20240516151843329"
+    },
+    {
+      "module": "sp_cloud",
+      "version": "20241017153510588"
+    }
+  ],
+  "migrationApiVersion": 1
+}
